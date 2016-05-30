@@ -23,10 +23,11 @@ def index3(name=None):
     return render_template('index3.html', name=name)
 
 
-@app.route('/table')
+@app.route('/index3/table/<name>', methods=['POST'])
 def getTable(name=None):
-    x = pd.DataFrame(np.random.randn(20, 5))
-    return x.to_html()
+	print name
+	x = pd.DataFrame(np.random.randn(20, 5))
+	return x.to_html()
 
 if __name__ == "__main__":
     app.run()

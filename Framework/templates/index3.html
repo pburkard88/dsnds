@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
 
     <!-- JQuery -->
@@ -14,7 +16,7 @@
 
     <!-- Our css/js -->
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style3.css') }}">
-   
+
 </head>
 
 <div class="row">
@@ -29,36 +31,45 @@
 
         <div class="tab-content">
             <div class="tab-pane" id="plan">Plan here...</div>
-            <div class="tab-pane active" id="explore"><input type="button" id="get_file" value="Grab file">
-                <input type="file" id="my_file"> Explore content...</div>
-                <div class="tab-pane" id="model">Model...</div>
-                <div class="tab-pane" id="report">Report...</div>
-            </div>
-            
+            <div class="tab-pane active" id="explore">
+                <div class="btn-group">
+                  <button class="btn dropdown-toggle" data-toggle="dropdown">Action <span class="caret"></span></button>
+                  <ul class="dropdown-menu">
+                    <li><a href="#" id="addTable">Action</a></li>
+                    <li><a href="#" id="addTable">Another action</a></li>
+                    <li><a href="#" id="addTable">Something else here</a></li>
+                </ul>
+            </div><!-- /btn-group -->
         </div>
-        <div class="col-md-6">
-            <div class="row">
-                <div class="col-md-12">
-                    <ul class="nav nav-tabs" id="rightTab">
-                        <li class="active"><a href="#workspace">Workspace</a></li>
-                        <li><a href="#history">History</a></li>
-                        <li><a href="#plot">Plot</a></li>
-                    </ul>
+        <div class="tab-pane" id="model">Model...</div>
+        <div class="tab-pane" id="report">Report...</div>
+    </div>
 
-                    <div class="tab-content">
-                        <div class="tab-pane active" id="workspace">Workspace content...</div>
-                        <div class="tab-pane" id="history">History...</div>
-                        <div class="tab-pane" id="plot">Plot...</div>
-                    </div>
-                    <div class="well">2</div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="well">4</div>
-                    </div>
-                </div>
+</div>
+<div class="col-md-6">
+    <div class="row">
+        <div class="col-md-12">
+            <ul class="nav nav-tabs" id="rightTab">
+                <li class="active"><a href="#workspace">Workspace</a></li>
+                <li><a href="#history">History</a></li>
+                <li><a href="#plot">Plot</a></li>
+            </ul>
+
+            <div class="tab-content">
+                <div class="tab-pane active" id="workspace">Workspace content...</div>
+                <div class="tab-pane" id="history">History...</div>
+                <div class="tab-pane" id="plot">Plot...</div>
+            </div>
+            <div class="well">2</div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="well">4</div>
             </div>
         </div>
     </div>
+</div>
+</div>
 
- <script type="text/javascript" src="{{ url_for('static', filename='js/script.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/script.js') }}"></script>
+</html>
