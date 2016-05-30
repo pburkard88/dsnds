@@ -1,7 +1,7 @@
 from flask import Flask
 from flask import render_template
 import pandas as pd
-
+import numpy as np
 app = Flask(__name__)
 
 
@@ -18,6 +18,15 @@ def hello2(name=None):
 @app.route('/index/')
 def index(name=None):
     return render_template('index.html', name=name)
+@app.route('/index3/')
+def index3(name=None):
+    return render_template('index3.html', name=name)
+
+
+@app.route('/table')
+def getTable(name=None):
+    x = pd.DataFrame(np.random.randn(20, 5))
+    return x.to_html()
 
 if __name__ == "__main__":
     app.run()

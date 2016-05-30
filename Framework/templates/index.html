@@ -1,47 +1,99 @@
-<head>
-
-<!-- JQuery -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-
-<!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
-
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-
-<!-- Our css/js -->
-<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
-<script type="text/javascript" src="{{ url_for('static', filename='js/resize.js') }}"></script>
-</head>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Viewer</title>
+    <meta name="generator" content="Bootply" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link href="{{ url_for('static', filename='css/styles.css') }}" rel="stylesheet">
+  </head>
+  <body>
 
 <div class="wrapper">
-  <div class="outer">
-    <ul class="nav nav-tabs visible-xs" id="myTab">
-      <li class="active"><a href="#htmPane">HTML</a></li>
-      <li><a href="#cssPane">CSS</a></li>
-      <li><a href="#jsPane">JavaScript</a></li>
-    </ul>
 
-    <div class="row">
+    <div class="outer">
 
-      <div class="col-sm-6 sp resize tab-pane" id="jsPane">
-        <div class="pane-label">javascript</div>
-        <div class="inner" id="jsEditor"></div>
-      </div>
-
-      <div class="col-sm-6">
-        <div class=" sp tab-pane" id="cssPane">
-          <div class="pane-label">css</div>
-          <div class="inner" id="cssEditor"></div>
-        </div>
-        <div class=" sp tab-pane" id="thirdPane">
-          <div class="pane-label">third</div>
-          <div class="inner" id="thirdEditor"></div>
-        </div>
-      </div><!--/column-->
-    </div><!--/row-->
-  </div><!--/outer-->
+        <div class="row">
+            <div class="col-sm-6 sp resize tab-pane" id="jsPane">
+                <div class="pane-settings"><i title="JavaScript Settings" class="glyphicon glyphicon-cog"></i></div>
+                <div class="pane-panel">
+                  <div class="row">
+                    <div class="col-xs-12"><input type="checkbox"> Wrap in doc.ready</div>
+                    <div class="col-xs-12"><input type="checkbox"> Modernizer</div>
+                    <div class="col-xs-12"><input type="checkbox"> More</div>
+                    <div class="col-xs-12"><input type="checkbox"> Another label</div>
+                  </div>                  
+                </div>
+                <div class="pane-label">javascript</div>
+                <div class="inner" id="jsEditor"></div>
+            </div>
+            <div class="col-sm-6 sp tab-pane" id="cssPane">
+                <div class="pane-settings"><i title="CSS Settings" class="glyphicon glyphicon-cog"></i></div>
+                <div class="pane-panel">
+                  <div class="row">
+                    <div class="col-xs-12"><input type="checkbox"> LESS</div>
+                    <div class="col-xs-12"><input type="checkbox"> SCSS</div>
+                    <div class="col-xs-12"><input type="checkbox"> SASS</div>
+                  </div>                  
+                </div>
+                <div class="pane-label">css</div>
+                <div class="inner" id="cssEditor"></div>
+            </div>
+         </div>
+         <div class="row">
+            <div class="col-sm-12 sp toolbar tab-pane" id="htmPane">
+              <div style="background-color:#001914;padding:3px;height:28px;">
+                <button class="btn btn-primary btn-xs">Mini</button>
+                <button class="btn btn-primary btn-xs">Minimore</button>
+                <button class="btn btn-primary btn-xs">Foo</button>
+                <button class="btn btn-primary btn-xs">Blahblah</button>
+                <button class="btn btn-primary btn-xs">Mini</button>
+                <button class="btn btn-primary btn-xs">Foo</button>
+              </div>
+                <div class="pane-settings"><i class="glyphicon glyphicon-cog"></i></div>
+                <div class="pane-panel">
+                  <div class="row">
+                    <div class="col-xs-12"><input type="checkbox"> Wrap in doc.ready</div>
+                    <div class="col-xs-6"><input type="checkbox"> option1</div>
+                    <div class="col-xs-6"><input type="checkbox"> option2</div>
+                    <div class="col-xs-12"><input type="checkbox"> Modernizer</div>
+                  </div>                  
+                </div>
+                <div class="pane-label">html</div>
+                <div class="inner" id="htmEditor"></div>
+            </div>
+      
+            <div class="col-sm-12 last">
+                <div class="pane-label">preview</div>
+                <div class="inner">
+                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                    doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
+                    veritatis et quasi architecto beatae vitae.
+                  wmfpw mefompwomefopmw eofpm wopemfpomwep fmpwem fp mwoepfm pwem fpmw epofmwef omwpefom wopefmopoloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
+                    veritatis et quasi architecto beatae vitae.
+                  wmfpw mefompwomefopmw eofpm wopemfpomwep fmpwem fp mwoepfm pwem fpmw epofmwef omwpefom wopefmopoloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
+                    veritatis et quasi architecto beatae vitae.
+                  wmfpw mefompwomefopmw eofpm wopemfpomwep fmpwem fp mwoepfm pwem fpmw epofmwef omwpefom wopefmopoloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
+                    veritatis et quasi architecto beatae vitae.
+                  wmfpw mefompwomefopmw eofpm wopemfpomwep fmpwem fp mwoepfm pwem fpmw epofmwef omwpefom wopefmopoloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
+                    veritatis et quasi architecto beatae vitae.
+                  wmfpw mefompwomefopmw eofpm wopemfpomwep fmpwem fp mwoepfm pwem fpmw epofmwef omwpefom wopefmop
+            </div>
+            </div>
+        </div><!--/row-->
+    </div><!--/outer-->
 </div><!--/wrapper-->
+
+  <!-- script references -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+    <script src="//code.jquery.com/ui/1.10.1/jquery-ui.js"></script>
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+  </body>
+</html>

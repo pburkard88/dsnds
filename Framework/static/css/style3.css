@@ -1,0 +1,28 @@
+ .container {
+ 	margin-top: 10px;
+ }
+
+ .sp {
+ 	min-height:45px;
+ 	padding-right:0;
+ 	padding-left: 0;
+ 	background-color: #222;
+ 	border-bottom:4px solid transparent;
+ 	padding-bottom:30px;
+ 	height:240px;
+ }
+
+ #my_file {
+ 	display: none;
+ }
+
+ #get_file {
+ 	background: #f9f9f9;
+ 	border: 5px solid #88c;
+ 	padding: 15px;
+ 	border-radius: 5px;
+ 	margin: 10px;
+ 	cursor: pointer;
+ }
+
+ 
