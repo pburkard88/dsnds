@@ -1,0 +1,47 @@
+<head>
+
+<!-- JQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+<!-- Our css/js -->
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+<script type="text/javascript" src="{{ url_for('static', filename='js/resize.js') }}"></script>
+</head>
+
+<div class="wrapper">
+  <div class="outer">
+    <ul class="nav nav-tabs visible-xs" id="myTab">
+      <li class="active"><a href="#htmPane">HTML</a></li>
+      <li><a href="#cssPane">CSS</a></li>
+      <li><a href="#jsPane">JavaScript</a></li>
+    </ul>
+
+    <div class="row">
+
+      <div class="col-sm-6 sp resize tab-pane" id="jsPane">
+        <div class="pane-label">javascript</div>
+        <div class="inner" id="jsEditor"></div>
+      </div>
+
+      <div class="col-sm-6">
+        <div class=" sp tab-pane" id="cssPane">
+          <div class="pane-label">css</div>
+          <div class="inner" id="cssEditor"></div>
+        </div>
+        <div class=" sp tab-pane" id="thirdPane">
+          <div class="pane-label">third</div>
+          <div class="inner" id="thirdEditor"></div>
+        </div>
+      </div><!--/column-->
+    </div><!--/row-->
+  </div><!--/outer-->
+</div><!--/wrapper-->
